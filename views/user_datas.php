@@ -1,0 +1,1 @@
+<?= $name . '<br>' . $firstname . '<br>' . $mail . '<br>' . $birthDate . '<br>' . $birthCountry . '<br>' . $phone . '<br>' . $link . '<br>' . $job_number . '<br>' . $badge_number .  '<br>' . $diploma . '<br>' . $superhero . '<br>' . $hack . '<br>' . $adress   ?>
