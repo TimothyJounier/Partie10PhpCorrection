@@ -34,7 +34,7 @@
             <option>Choisissez votre pays de naissance</option>
             <option value="France" <?= (isset($birthCountry) && $birthCountry == 'France') ? 'selected' : '' ?> >France</option>
             <option value="Italie" <?= (isset($birthCountry) && $birthCountry == 'Italie') ? 'selected' : '' ?> >Italie</option>
-            <option value="Grande Bretagne" <?= ($birthCountry == 'Grande Bretagne') ? 'selected' : '' ?> >Grande Bretagne</option>
+            <option value="Grande Bretagne" <?= (isset($birthCountry) && $birthCountry == 'Grande Bretagne') ? 'selected' : '' ?> >Grande Bretagne</option>
             <option value="Mars">Mars</option>
         </select>     
         <div id="birthCountry_error" class="text-danger"><?= $errorsArray['birthCountry_error'] ?? ''?></div>
