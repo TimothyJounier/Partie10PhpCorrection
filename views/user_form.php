@@ -16,21 +16,21 @@
     <!-- Mail -->
     <div class="mb-3">
         <label for="mail" class="form-label">Mail</label>
-        <input type="mail" class="form-control" id="mail" name="mail" pattern="" title="Votre adresse mail n'est pas valide" required value="<?= $mail ?? ''?>">
+        <input type="mail" class="form-control" id="mail" name="mail" title="Votre adresse mail n'est pas valide" required value="<?= $mail ?? ''?>">
         <div id="mail_error" class="form-text"><?= $errorsArray['mail_error'] ?? ''?></div>
     </div>
 
     <!-- date de naissance -->
     <div class="mb-3">
         <label for="birthDate" class="form-label">Date de naissance</label>
-        <input type="date" class="form-control" id="birthDate" name="birthDate" pattern="" required value="<?= $birthDate ?? ''?>">
+        <input type="date" class="form-control" id="birthDate" name="birthDate" required value="<?= $birthDate ?? ''?>">
         <div id="birthDate_error" class="form-text"><?= $errorsArray['birthDate_error'] ?? ''?></div>
     </div>
 
     <!-- pays de naissance -->
     <div class="mb-3">
         <label for="birthCountry" class="form-label">Pays de naissance</label>
-        <select class="form-select" id="birthCountry" name="birthCountry" pattern="" required >
+        <select class="form-select" id="birthCountry" name="birthCountry" required >
             <option>Choisissez votre pays de naissance</option>
             <option value="France" <?= ($birthCountry == 'France') ? 'selected' : '' ?> >France</option>
             <option value="Italie" <?= ($birthCountry == 'Italie') ? 'selected' : '' ?> >Italie</option>
@@ -43,7 +43,7 @@
     <!-- Téléphone -->
     <div class="mb-3">
         <label for="phone" class="form-label">Téléphone</label>
-        <input type="tel" class="form-control" id="phone" name="phone" pattern="/^(\+33|0|0033)[1-9]((-|\/|\.)\d{2}){4}$/" title="Votre numéro de téléphone n'est pas valide" value="<?= $phone ?? ''?>">
+        <input type="tel" class="form-control" id="phone" name="phone" pattern="(01|02|03|04|05|06|07|08|09)[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}" title="Votre numéro de téléphone n'est pas valide format requis : 0000000000" value="<?= $phone ?? ''?>">
         <div id="phone_error" class="form-text"><?= $errorsArray['phone_error'] ?? ''?></div>
     </div>
 
