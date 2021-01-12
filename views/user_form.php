@@ -16,7 +16,7 @@
     <!-- Mail -->
     <div class="mb-3">
         <label for="mail" class="form-label">Mail</label>
-        <input type="mail" class="form-control" id="mail" name="mail" title="Votre adresse mail n'est pas valide" required value="<?= $mail ?? ''?>">
+        <input type="email" class="form-control" id="mail" name="mail" title="Votre adresse mail n'est pas valide" required value="<?= $mail ?? ''?>">
         <div id="mail_error" class="form-text"><?= $errorsArray['mail_error'] ?? ''?></div>
     </div>
 
