@@ -2,21 +2,21 @@
     <!-- nom -->
     <div class="mb-3">
         <label for="name" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="name" name="name" pattern="[A-Za-z-éèêëàâäôöûüç' ]+" required value="<?= $name ?? ''?>">
+        <input type="text" class="form-control" id="name" name="name" pattern="[A-Za-z-éèêëàâäôöûüç' ]+" title="Lettres majuscule et minuscule uniquement" required value="<?= $name ?? ''?>">
         <div id="name_error" class="form-text"><?= $errorsArray['name_error'] ?? ''?></div>
     </div>
   
     <!-- prénom -->
     <div class="mb-3">
         <label for="firstname" class="form-label">Prénom</label>
-        <input type="text" class="form-control" id="firstname" name="firstname" pattern="[A-Za-z-éèêëàâäôöûüç' ]+" required value="<?= $firstname ?? ''?>">
+        <input type="text" class="form-control" id="firstname" name="firstname" pattern="[A-Za-z-éèêëàâäôöûüç' ]+" title="Lettres majuscules et minuscules uniquement" required value="<?= $firstname ?? ''?>">
         <div id="firstname_error" class="form-text"><?= $errorsArray['firstname_error'] ?? ''?></div>
     </div>
 
     <!-- Mail -->
     <div class="mb-3">
         <label for="mail" class="form-label">Mail</label>
-        <input type="mail" class="form-control" id="mail" name="mail" pattern="" required value="<?= $mail ?? ''?>">
+        <input type="mail" class="form-control" id="mail" name="mail" pattern="" title="Votre adresse mail n'est pas valide" required value="<?= $mail ?? ''?>">
         <div id="mail_error" class="form-text"><?= $errorsArray['mail_error'] ?? ''?></div>
     </div>
 
@@ -43,7 +43,7 @@
     <!-- Téléphone -->
     <div class="mb-3">
         <label for="phone" class="form-label">Téléphone</label>
-        <input type="tel" class="form-control" id="phone" name="phone" pattern="/^(\+33|0|0033)[1-9]((-|\/|\.)\d{2}){4}$/" value="<?= $phone ?? ''?>">
+        <input type="tel" class="form-control" id="phone" name="phone" pattern="/^(\+33|0|0033)[1-9]((-|\/|\.)\d{2}){4}$/" title="Votre numéro de téléphone n'est pas valide" value="<?= $phone ?? ''?>">
         <div id="phone_error" class="form-text"><?= $errorsArray['phone_error'] ?? ''?></div>
     </div>
 
@@ -51,21 +51,21 @@
     <!-- URL -->
     <div class="mb-3">
         <label for="link" class="form-label">Lien Codecademy</label>
-        <input type="text" class="form-control" id="link" name="link" pattern="/^(?:http(s)?://)?[\w.-]+(?:.[\w.-]+)+[\w-._~:/?#[]@!$&'()*+,;=.]+$/" value="<?= $link ?? ''?>">
+        <input type="text" class="form-control" id="link" name="link" pattern="/^(?:http(s)?://)?[\w.-]+(?:.[\w.-]+)+[\w-._~:/?#[]@!$&'()*+,;=.]+$/" title="Votre URL n'est pas valide" value="<?= $link ?? ''?>">
         <div id="link_error" class="form-text"><?= $errorsArray['link_error'] ?? ''?></div>
     </div>
 
     <!-- Numéro Pole Emploi -->
     <div class="mb-3">
         <label for="job_number" class="form-label">Numéro pole emploi</label>
-        <input type="text" class="form-control" id="job_number" name="job_number" pattern="[0-9]{7}[A-Z]{1}" value="<?= $job_number ?? ''?>">
+        <input type="text" class="form-control" id="job_number" name="job_number" pattern="[0-9]{7}[A-Z]{1}" title="Votre numéro pôle emploi n'est pas valide" value="<?= $job_number ?? ''?>">
         <div id="job_number_error" class="form-text"><?= $errorsArray['job_number_error'] ?? ''?></div>
     </div>
 
     <!-- Badge Number -->
     <div class="mb-3">
         <label for="badge_number" class="form-label">Nombre de badge</label>
-        <input type="number" class="form-control" id="badge_number" name="badge_number" pattern="[0-9]{7}[A-Z]{1}" value="<?= $badge_number ?? ''?>" min="0" max="200">
+        <input type="number" class="form-control" id="badge_number" name="badge_number" pattern="[0-9]{7}[A-Z]{1}" title="Votre numéro de badge n'est pas valide" value="<?= $badge_number ?? ''?>" min="0" max="200">
         <div id="badge_number_error" class="form-text"><?= $errorsArray['badge_number_error'] ?? ''?></div>
     </div>
 
